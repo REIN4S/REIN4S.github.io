@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            stroke: rgb(0, 0, 0);
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+        #triangle {
+            stroke: rgba(100, 100, 100, .5);
+            stroke-width: 3;
+
+        }
+        text[class^="text-"] {
+            stroke-width: 1;
+        }
+        #STORY {
+            -webkit-transition: all 3000ms ease;
+			-moz-transition: all 3000ms ease;
+			-ms-transition: all 3000ms ease;
+			-o-transition: all 3000ms ease;
+			transition: all 3000ms ease;
+            -webkit-transform: translate(-200px, 0px);
+			-moz-transform: translate(-200px, 0px);
+			-o-transform: translate(-200px, 0px);
+			-ms-transform: translate(-200px, 0px);
+			transform: translate(-200px, 0px);
+            opacity: .0;
+        }
+        #STORY:hover {
+            -webkit-transform: translate(0px, 0px);
+			-moz-transform: translate(0px, 0px);
+			-o-transform: translate(0px, 0px);
+			-ms-transform: translate(0px, 0px);
+			transform: translate(0px, 0px);
+            opacity: 1;
+        }
+        
+    </style>
+    
+    <defs>
+    <g id="triangle">
+        <polygon points="
+        0 0
+        100 100
+        200 0" />
+    </g>
+    </defs>
+
+    <g id="SCHEDULE">
+        <use href="#triangle" x="60" y="10"
+            fill="rgba(200, 30, 0, .5)"/>
+        <use href="#triangle" x="0" y="0" 
+            transform="rotate(-180 50 160) translate(-160 70)" 
+            fill="rgba(0, 200, 30, .5)" />
+        <text class="text-task" 
+            x="140" y="55" 
+            fill="grey">TASK</text>
+        <text class="text-resource"
+            x="120" y="220"
+            fill="grey">RESOURCE</text>
+        <text class="text-schedule"
+            x="120" y="135"
+            fill="grey">SCHEDULE</text>
+    </g>
+
+    <g id="STORY">
+        <use href="#triangle" x="50" y="160" 
+            transform="rotate(-90 50 160) translate(-70 -10)" 
+            fill="rgba(0, 100, 255, .5)" />
+        <use href="#triangle" x="50" y="160" 
+            transform="rotate(90 50 160) translate(-130 -230)" 
+            fill="rgba(100, 50, 200, .5)" />
+        <text class="text-task" 
+            x="0" y="0" style="writing-mode: tb;"
+            transform="rotate(360) translate(80 110)"
+            fill="grey">FLOW</text>
+        <text class="text-resource"
+            x="0" y="0" style="writing-mode: tb;"
+            transform="rotate(180) translate(-240 -155)"
+            fill="grey">EVENT</text>
+        <text class="text-schedule"
+            x="160" y="105" style="writing-mode: tb;"
+            fill="grey">STORY</text>
+    </g>
+</svg>
